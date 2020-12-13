@@ -462,7 +462,6 @@ int main()
 		else if(commad_in_general_menu == 2 && locked_login == 1)
 		{
 		Timer();
-		locked_login=0;
 		}
 
 
@@ -612,6 +611,7 @@ int Timer()
 		if (time_left != former_time)
 		{
 			system("CLS");
+			
 			printf("LogIn is locked ! You should wait for %d seconds then you can try again \n", time_left);
 			former_time = time_left;
 		}

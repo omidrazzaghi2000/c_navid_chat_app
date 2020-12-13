@@ -625,3 +625,121 @@ int Timer()
 	}
 	return;
 }
+
+void Login(long long int num1,
+	long long int num2,
+	long long int num3,
+	int pass1,
+	int pass2,
+	int pass3
+	)
+{
+	while (1)
+	{
+
+		system("CLS");
+		printf("	Please enter your phone number : \n");
+
+		scanf_s("%lld", &check_number);
+		printf("\n");
+
+		if (check_number == num1) 	/*Enter number to logIn is num1*/
+
+		{
+			wrongpass = 1;
+			while (m == 0)
+			{
+
+				printf("please enter your password : \n");
+				scanf_s("%d", &check_pass);
+				if (check_pass == pass1)
+				{
+					system("CLS");
+					printf("Welcome to our program ;)  \n");
+					break;
+				}
+				else
+				{
+
+					printf("%d  \n", wrongpass);
+					//system("CLS");
+					printf("Wrong password!!!\n");
+					if (wrongpass == 3)
+					{
+						printf(" Too many attempts LogIn is locked\n");
+						locked_login = 1;
+						//Timer();
+						break;
+					}
+					printf("please Try again .. \n");
+					wrongpass++;
+					continue;
+				}
+
+			}
+
+			break;
+
+		}
+		else if (check_number == num2)		/*Enter number to logIn is num2*/
+
+		{
+			while (m == 0)
+			{
+
+				printf("please enter your password : \n");
+				scanf_s("%d", &check_pass);
+				if (check_pass == pass2)
+				{
+					system("CLS");
+					printf("Welcome to our program ;)  \n");
+					break;
+				}
+				else
+				{
+					system("CLS");
+					printf("Wrong password!!!\n");
+					printf("please Try again .. \n");
+					continue;
+				}
+
+			}
+			break;
+
+
+		}
+		else if (check_number == num3)		/*Enter number to logIn is num3*/
+
+		{
+			while (m == 0)
+			{
+				system("CLS");
+				printf("please enter your password : \n");
+				scanf_s("%d", &check_pass);
+				if (check_pass == pass3)
+				{
+					system("CLS");
+					printf("Welcome to our program ;)  \n");
+					break;
+				}
+				else
+				{
+					system("CLS");
+					printf("Wrong password!!!\n");
+					printf("please Try again .. \n");
+					continue;
+				}
+			}
+			break;
+
+		}
+		else
+		{
+			system("CLS");
+			printf("The number does not exist \n");
+			break;
+		}
+
+
+	}
+}

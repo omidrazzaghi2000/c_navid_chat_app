@@ -636,8 +636,7 @@ void Login(long long int num1,
 {
 	while (1)
 	{
-		int check_number;
-		
+
 		system("CLS");
 		printf("	Please enter your phone number : \n");
 
@@ -647,33 +646,29 @@ void Login(long long int num1,
 		if (check_number == num1) 	/*Enter number to logIn is num1*/
 
 		{
-
-			int wrongpass = 1;
-			while (1)
+			wrongpass = 1;
+			while (m == 0)
 			{
-				int check_pass;
+
 				printf("please enter your password : \n");
 				scanf_s("%d", &check_pass);
 				if (check_pass == pass1)
 				{
 					system("CLS");
 					printf("Welcome to our program ;)  \n");
-					//break;
-					return 1;
+					break;
 				}
 				else
 				{
 
-					//printf("%d  \n", wrongpass);
+					printf("%d  \n", wrongpass);
 					//system("CLS");
 					printf("Wrong password!!!\n");
 					if (wrongpass == 3)
 					{
 						printf(" Too many attempts LogIn is locked\n");
-						//locked_login = 1;
-						
-						
-						return -3;
+						locked_login = 1;
+						//Timer();
 						break;
 					}
 					printf("please Try again .. \n");
@@ -689,9 +684,9 @@ void Login(long long int num1,
 		else if (check_number == num2)		/*Enter number to logIn is num2*/
 
 		{
-			while (1)
+			while (m == 0)
 			{
-				int check_pass;
+
 				printf("please enter your password : \n");
 				scanf_s("%d", &check_pass);
 				if (check_pass == pass2)
@@ -716,9 +711,8 @@ void Login(long long int num1,
 		else if (check_number == num3)		/*Enter number to logIn is num3*/
 
 		{
-			while (1)
+			while (m == 0)
 			{
-				int check_pass;
 				system("CLS");
 				printf("please enter your password : \n");
 				scanf_s("%d", &check_pass);
